@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:provider_tutorial/provider/count_provider.dart';
 import 'package:provider_tutorial/sreen/home_screen.dart';
+import 'package:provider_tutorial/sreen/home_screen_2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +22,7 @@ class _MyAppState extends State<MyApp> {
     return ChangeNotifierProvider(create:(context) => CountProvider(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: homescreen(),
+        home: homescreen_two(),
       ),
 
     );
