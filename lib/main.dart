@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:provider_tutorial/provider/count_provider.dart';
+import 'package:provider_tutorial/provider/fabList_provider.dart';
 import 'package:provider_tutorial/provider/slider_provider.dart';
+import 'package:provider_tutorial/sreen/faburite_app%20project.dart';
 import 'package:provider_tutorial/sreen/home_screen.dart';
 import 'package:provider_tutorial/sreen/home_screen_2.dart';
 
@@ -21,10 +23,11 @@ class _MyAppState extends State<MyApp> {
       providers: [
         ChangeNotifierProvider(create: (context) => CountProvider()),
         ChangeNotifierProvider(create: (context) => sliderProvider()),
+        ChangeNotifierProvider(create: (context) => favListProvider(),)
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: homescreen_two(),
+        home: favApp(),
       ),
     );
   }
